@@ -1,0 +1,28 @@
+[package]
+name = "sniper_zoom"
+version = "2.0.0"
+edition = "2024"
+default-run = "sniper_zoom"
+
+[[bin]]
+name = "sniper_zoom"
+path = "src/main.rs"
+
+[[bin]]
+name = "SniperZoom_Setup"
+path = "src/bin/setup.rs"
+
+[dependencies]
+eframe = "0.36.2"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+windows-sys = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading"
+] }
+
+
